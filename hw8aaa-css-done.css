@@ -1,0 +1,243 @@
+body {
+  margin: 50px;
+  height: 100hw;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#spinner {
+  width: 440px;
+  height: 240px;
+  background: grey;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(50% - 120px);
+}
+
+.checkmark {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(196, 196, 248);
+  border-radius: 10px; 
+  position: relative;
+  border: 3px solid rgb(66, 66, 236);
+  position: relative;
+  transition: background-color 0.4s; 
+}
+
+#check:checked ~ .checkmark {
+  background-color: rgb(196, 196, 248);  
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 45px;
+  border-right: 5px solid rgb(66, 66, 236);
+  border-bottom: 5px solid rgb(66, 66, 236);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(40deg) scale(1.7);
+  opacity: 0;
+  transition: all .4s;  
+}
+
+#check:checked ~ .checkmark::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotateZ(40deg) scale(1);  
+}
+
+.spinner1 {
+  width: 100px;
+  height: 100px;
+  margin: -50px 150px;
+  position: absolute;
+  animation-play-state: paused;
+}
+
+#check:checked + label[ for=check ] ~ .spinner1 {
+  -webkit-animation: rotateit1 3.1s linear infinite;
+  animation: rotateit1 3.1s linear infinite;
+}
+
+@-webkit-keyframes rotateit1 {
+  from { -webkit-transform: rotate(-360deg); }
+  to { -webkit-transform: rotate(0deg); }
+}
+
+@keyframes rotateit1 {
+  from { transform: rotate(-360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.spinner1.bar div {
+  width: 10px;
+  height: 30px;
+  background: red;
+  position: absolute;
+  top: 35px;
+  left: 45px;
+}
+
+.spinner1.bar div:nth-child(1) {
+  -webkit-transform: rotate(0deg) translate(0, -30px);
+  transform: rotate(0deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(2) {
+  -webkit-transform: rotate(40deg) translate(0, -30px);
+  transform: rotate(40deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(3) {
+  -webkit-transform: rotate(80deg) translate(0, -30px);
+  transform: rotate(80deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(4) {
+  -webkit-transform: rotate(120deg) translate(0, -30px);
+  transform: rotate(120deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(5) {
+  -webkit-transform: rotate(160deg) translate(0, -30px);
+  transform: rotate(160deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(6) {
+  -webkit-transform: rotate(200deg) translate(0, -30px);
+  transform: rotate(200deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(7) {
+  -webkit-transform: rotate(240deg) translate(0, -30px);
+  transform: rotate(240deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(8) {
+  -webkit-transform: rotate(280deg) translate(0, -30px);
+  transform: rotate(280deg) translate(0, -30px);
+}
+
+.spinner1.bar div:nth-child(9) {
+  -webkit-transform: rotate(320deg) translate(0, -30px);
+  transform: rotate(320deg) translate(0, -30px);
+}
+
+#spi1-1 {
+  width: 60px;
+  height: 60px;
+  background: red;
+  border-radius: 50%;
+  margin: -30px 171px;
+  position: absolute;
+}
+
+#spi1-2 {
+  width: 30px;
+  height: 30px;
+  background: grey;
+  border-radius: 50%;
+  margin: -15px 186px;
+  position: absolute;
+}
+
+.spinner2 {
+  width: 100px;
+  height: 100px;
+  margin: 25px 120px;
+  position: absolute;
+  animation-play-state: paused;
+}
+
+#check:checked + label[ for=check ] ~ .spinner2 {
+  -webkit-animation: rotateit2 3.1s linear infinite;
+  animation: rotateit2 3.1s linear infinite;
+}
+
+@-webkit-keyframes rotateit2 {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0deg); }
+}
+
+@keyframes rotateit2 {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.spinner2.bar div {
+  width: 10px;
+  height: 30px;
+  background: blue;
+  position: absolute;
+  top: 35px;
+  left: 45px;
+}
+
+.spinner2.bar div:nth-child(1) {
+  -webkit-transform: rotate(0deg) translate(0, -30px);
+  transform: rotate(0deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(2) {
+  -webkit-transform: rotate(40deg) translate(0, -30px);
+  transform: rotate(40deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(3) {
+  -webkit-transform: rotate(80deg) translate(0, -30px);
+  transform: rotate(80deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(4) {
+  -webkit-transform: rotate(120deg) translate(0, -30px);
+  transform: rotate(120deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(5) {
+  -webkit-transform: rotate(160deg) translate(0, -30px);
+  transform: rotate(160deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(6) {
+  -webkit-transform: rotate(200deg) translate(0, -30px);
+  transform: rotate(200deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(7) {
+  -webkit-transform: rotate(240deg) translate(0, -30px);
+  transform: rotate(240deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(8) {
+  -webkit-transform: rotate(280deg) translate(0, -30px);
+  transform: rotate(280deg) translate(0, -30px);
+}
+
+.spinner2.bar div:nth-child(9) {
+  -webkit-transform: rotate(320deg) translate(0, -30px);
+  transform: rotate(320deg) translate(0, -30px);
+}
+
+#spi2-1 {
+  width: 60px;
+  height: 60px;
+  background: blue;
+  border-radius: 50%;
+  margin: 45px 140px;
+  position: absolute;
+}
+
+#spi2-2 {
+  width: 30px;
+  height: 30px;
+  background: grey;
+  border-radius: 50%;
+  margin: 60px 155px;
+  position: absolute;
+}
+
